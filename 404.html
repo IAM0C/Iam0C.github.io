@@ -2,13 +2,51 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>404 Not Found - IM0C</title>
+		<title>404 Not Found - IM⁰C</title>
 	</head>
 	<body onclick="window.location.href='/'" style="text-align: center;">
-		<h1 style="font-size: 200px;display: inline-block;margin: 50px;">&Omega;, </h1><h1 style="display: inline-block;">Page Not Found!</h1>
+		<h1 style="font-size: 200px;display: inline-block;margin: 50px;">&Omega;, </h1>
+		<h1 style="display: inline-block;">Page Not Found!</h1>
 		<img src="src/404.png" />
-		<h2>You are out of civilization!</h2>
-		<h2>Nothing here except nothing.</h2>
-		<h2>Click me to return to Civilization.</h2>
+		<style>
+			html{
+				overflow-x: hidden;
+				overflow-y: scroll;
+			}
+			
+			body{
+				width: 100vw;
+			}
+			
+			h2 {
+				color: transparent;
+				position: relative;
+				top: 0;
+			}
+
+			@keyframes getin {
+				0% {
+					top: 1em;
+					color: transparent;
+				}
+				100% {
+					top: 0;
+					color: black;
+				}
+			}
+		</style>
+		<h2 id="1" style="animation: getin 2s ease-in-out 0s;">You are out of civilization,</h2>
+		<h2 id="2" style="animation: getin 2s ease-in-out 1s;">Nothing here except nothing.</h2>
+		<h2 id="3" style="animation: getin 2s ease-in-out 2s;">Click me to Return.</h2>
+		<script>
+			document.getElementById("1").style.color="black";
+			setTimeout(function(){
+				document.getElementById("2").style.color="black";
+			}, 2900);
+			setTimeout(function(){
+				document.getElementById("3").style.color="black";
+			}, 3900);
+		</script>
+		<div style="display: block;position: absolute;top: 100vh;width: 100vw;height: 3em;background-color: #20232a;line-height: 3em;text-align: center;vertical-align: center;color: white;">Copyright &copy; Bernie Huang 2022-2023</div>
 	</body>
 </html>
